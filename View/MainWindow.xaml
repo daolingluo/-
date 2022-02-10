@@ -1,0 +1,29 @@
+﻿<Window x:Class="demo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:demo"
+        mc:Ignorable="d"
+        Title="学生管理系统" Height="600" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DockPanel LastChildFill="True">
+            <Menu DockPanel.Dock="Top" Margin="0" Height="30" Background="LightBlue" Padding="5">
+                <MenuItem Header="学生管理">
+                    <MenuItem Header="学生列表"/>
+                    <MenuItem Header="学生考勤"/>
+                </MenuItem>
+                <MenuItem Header="退出系统"/>
+            </Menu>
+            <StackPanel Width="160" Margin="0" DockPanel.Dock="Left" Height="600" Background="LightSteelBlue">
+                <Expander Header="学生管理">
+                    <StackPanel Margin="30,2,0,2">
+                        <Label Margin="2" Content="学生列表"/>
+                        <Label Margin="2" Content="学生考勤"/>
+                    </StackPanel>
+                </Expander>
+            </StackPanel>
+            <Frame Name="centerfrm"/>
+        </DockPanel>
+    </Grid>
+</Window>
